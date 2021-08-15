@@ -154,7 +154,7 @@ def Get_OTP():
             msg = Message('OTP',sender = 'nreply760@gmail.com', recipients = [result.mailid])  
             msg.body = f" A request has been recieved to change the password for your Account your secret otp is {str(otp)}" 
             mail.send(msg) 
-            flash(f"hello {result.username} a otp has been sent you registered email id {result.mailid}","success")
+            flash(f"hello {result.username} a otp has been sent to your registered email id {result.mailid}","success")
             return render_template("otp_valid.html")
         else:
             flash("UserName Does Not Exists","danger")
