@@ -51,8 +51,8 @@ class Useruthentication(db.Model,UserMixin):
     mailid=db.Column(db.String(20))
     userpassword=db.Column(db.String(40))
     username=db.Column(db.String(40))
-    #phno=db.Column(db.Integer)
-    #rectym=db.Column(db.DateTime)
+    phno=db.Column(db.Integer)
+    rectym=db.Column(db.DateTime)
 
     def __init__(self,mailid,userpassword,username,phno,rectym):
         self.mailid=mailid
