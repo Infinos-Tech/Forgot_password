@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <style>
+        
+ .container{
+margin: auto;
+width: 500px;
+max-width: 90%; 
+ }
+ 
+button {
+background-color: #89d0da;
+color: white;
+padding: 14px 20px;
+margin: 8px 0;
+border: none;
+cursor: pointer;
+width: 100%;
+}
+input[type=submit] {
+background-color: aqua;
+color: white;
+padding: 12px 20px;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+}
+
+    </style>
+    <title>User Signup</title>
+</head>
+<body>
+    <center>
+        {% with messages= get_flashed_messages()%}
+            {% if messages %}
+                {% for msg in messages %}
+                    <p>{{msg}}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <h2>User Signup</h2><br><br>
+        <form action="/SignUp" method="POST">
+          <input type="text" name="un" id="" placeholder="username">
+            <br><br>
+            <input type="text" name="phno" id="" placeholder="phone">
+            <br><br>
+            <input type="text" name="email" id="" placeholder="email">
+            <br><br>
+            <input type="password" name="up" id="" placeholder="password">
+          
+            <br><br>
+            <div class="text-center">
+            <button class =" btn btn-info " type="submit">submit</button>
+        </div>
+        </form>
+       
+    </center>
+</body>
+</html>
