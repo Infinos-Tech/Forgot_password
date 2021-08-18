@@ -49,6 +49,9 @@ class Useruthentication(db.Model,UserMixin):
     __tablename__ = 'Useruthentication'
     id=db.Column(db.Integer,primary_key=True)
     mailid=db.Column(db.String(20))
+'''When we hash a string, its length increases. 
+So we have to increase the length of the column
+as well only then that column will be able to store the value.'''
     userpassword=db.Column(db.String(150))
     username=db.Column(db.String(155))
     phno=db.Column(db.String(13))
