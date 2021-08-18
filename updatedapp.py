@@ -132,6 +132,8 @@ def signup():
     return render_template('Signup.html',form=form)'''
 
 # This is working
+'''for the signup part i have written the code in 
+my own way and it is working'''
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
    if request.method=="POST":
