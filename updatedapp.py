@@ -129,8 +129,8 @@ def signup():
     return render_template('Signup.html',form=form)'''
 
 # This is working
-@app.route('/SignUp', methods=['GET', 'POST'])
-def SignUp():
+@app.route('/signup', methods=['GET', 'POST'])
+def signup():
    if request.method=="POST":
        un = hashlib.md5(request.form.get("un").encode())
        up = hashlib.md5(request.form.get("up").encode())
