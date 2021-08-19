@@ -105,29 +105,6 @@ def user():
 @login_required
 def dashboard():
     return render_template('dashboard.html')
-
-#Thats not working
-'''@app.route('/signup',methods=["GET","POST"])
-def signup():
-    form=SignUpForm()
-    if form.validate_on_submit():
-        un = hashlib.md5(form.username.data.encode())
-        up = hashlib.md5(form.userpassword.data.encode())
-        if  Useruthentication.query.filter_by(username=un.hexdigest()).first():
-            flash("Username allready Taken !","danger")
-            return redirect(url_for('signup'))
-        else:
-            NewUser = Useruthentication(username=un.hexdigest(),
-            userpassword=up.hexdigest(),
-            mailid = form.mailid.data,
-            phno=form.phno.data,
-            rectym=datetime.now())
-            db.session.add(NewUser)
-            db.session.commit()
-            flash("Registration successful","info")
-            return redirect(url_for('user'))
-    return render_template('Signup.html',form=form)'''
-
 # This is working
 @app.route('/SignUp', methods=['GET', 'POST'])
 def SignUp():
